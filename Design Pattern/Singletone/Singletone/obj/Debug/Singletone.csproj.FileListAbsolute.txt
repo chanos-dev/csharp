@@ -1,0 +1,7 @@
+D:\github\Design Pattern\Singletone\Singletone\bin\Debug\Singletone.exe.config
+D:\github\Design Pattern\Singletone\Singletone\bin\Debug\Singletone.exe
+D:\github\Design Pattern\Singletone\Singletone\bin\Debug\Singletone.pdb
+D:\github\Design Pattern\Singletone\Singletone\obj\Debug\Singletone.csprojAssemblyReference.cache
+D:\github\Design Pattern\Singletone\Singletone\obj\Debug\Singletone.csproj.CoreCompileInputs.cache
+D:\github\Design Pattern\Singletone\Singletone\obj\Debug\Singletone.exe
+D:\github\Design Pattern\Singletone\Singletone\obj\Debug\Singletone.pdb
