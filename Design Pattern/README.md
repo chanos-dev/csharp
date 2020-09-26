@@ -5,3 +5,5 @@
 >0x01 Singleton Pattern
 
 >0x02 Build Pattern
+
+>0x03 Factory Pattern
