@@ -6,4 +6,6 @@
 
 >0x02 Build Pattern
 
->0x03 Factory Pattern
+>0x03 Factory Method Pattern
+
+>0x04 Abstract Factory Pattern
