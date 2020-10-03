@@ -9,3 +9,5 @@
 >0x03 Factory Method Pattern
 
 >0x04 Abstract Factory Pattern
+
+>0x05 Adapter Pattern
