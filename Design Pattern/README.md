@@ -11,3 +11,5 @@
 >0x04 Abstract Factory Pattern
 
 >0x05 Adapter Pattern
+
+>0x06 Strategy Pattern
