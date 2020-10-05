@@ -13,3 +13,5 @@
 >0x05 Adapter Pattern
 
 >0x06 Strategy Pattern
+
+>0x07 Bridge Pattern
