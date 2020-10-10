@@ -15,3 +15,5 @@
 >0x06 Strategy Pattern
 
 >0x07 Bridge Pattern
+
+>0x08 Observer Pattern
