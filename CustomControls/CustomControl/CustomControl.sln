@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1209
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomControl", "CustomControl\CustomControl.csproj", "{BAC274B2-8DAD-4D6D-AACB-2EB2577E566E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomControlLibrary", "CustomControlLibrary\CustomControlLibrary.csproj", "{ACAE236C-3AC3-4F6F-BDF2-E6EB4AF95E77}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BAC274B2-8DAD-4D6D-AACB-2EB2577E566E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BAC274B2-8DAD-4D6D-AACB-2EB2577E566E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BAC274B2-8DAD-4D6D-AACB-2EB2577E566E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BAC274B2-8DAD-4D6D-AACB-2EB2577E566E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACAE236C-3AC3-4F6F-BDF2-E6EB4AF95E77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACAE236C-3AC3-4F6F-BDF2-E6EB4AF95E77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACAE236C-3AC3-4F6F-BDF2-E6EB4AF95E77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACAE236C-3AC3-4F6F-BDF2-E6EB4AF95E77}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EDC289EC-BBDC-4F8B-9573-C38F5EB05A9C}
+	EndGlobalSection
+EndGlobal
