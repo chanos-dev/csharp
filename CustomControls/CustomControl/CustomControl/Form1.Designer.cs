@@ -28,24 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.toggleButton1 = new CustomControlLibrary.Controls.ToggleButton();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            this.searchBox1 = new CustomControlLibrary.Controls.SearchBox();
             this.toggleButton2 = new CustomControlLibrary.Controls.ToggleButton();
+            this.toggleButton1 = new CustomControlLibrary.Controls.ToggleButton();
             this.SuspendLayout();
             // 
-            // toggleButton1
+            // searchBox1
             // 
-            this.toggleButton1.AutoSize = true;
-            this.toggleButton1.Location = new System.Drawing.Point(44, 40);
-            this.toggleButton1.MinimumSize = new System.Drawing.Size(45, 22);
-            this.toggleButton1.Name = "toggleButton1";
-            this.toggleButton1.OffBackGroundColor = System.Drawing.Color.Gray;
-            this.toggleButton1.OffToggleColor = System.Drawing.Color.Gainsboro;
-            this.toggleButton1.OnBackGroundColor = System.Drawing.Color.MediumPurple;
-            this.toggleButton1.OnToggleColor = System.Drawing.Color.WhiteSmoke;
-            this.toggleButton1.Size = new System.Drawing.Size(45, 22);
-            this.toggleButton1.SoildStyle = true;
-            this.toggleButton1.TabIndex = 0;
-            this.toggleButton1.UseVisualStyleBackColor = true;
+            this.searchBox1.Data = ((System.Collections.Generic.List<string>)(resources.GetObject("searchBox1.Data")));
+            this.searchBox1.DisplayLimitCount = 10;
+            this.searchBox1.Location = new System.Drawing.Point(44, 110);
+            this.searchBox1.Name = "searchBox1";
+            this.searchBox1.Size = new System.Drawing.Size(279, 21);
+            this.searchBox1.TabIndex = 2;
             // 
             // toggleButton2
             // 
@@ -62,12 +58,28 @@
             this.toggleButton2.TabIndex = 1;
             this.toggleButton2.UseVisualStyleBackColor = true;
             // 
+            // toggleButton1
+            // 
+            this.toggleButton1.AutoSize = true;
+            this.toggleButton1.Location = new System.Drawing.Point(44, 40);
+            this.toggleButton1.MinimumSize = new System.Drawing.Size(45, 22);
+            this.toggleButton1.Name = "toggleButton1";
+            this.toggleButton1.OffBackGroundColor = System.Drawing.Color.Gray;
+            this.toggleButton1.OffToggleColor = System.Drawing.Color.Gainsboro;
+            this.toggleButton1.OnBackGroundColor = System.Drawing.Color.MediumPurple;
+            this.toggleButton1.OnToggleColor = System.Drawing.Color.WhiteSmoke;
+            this.toggleButton1.Size = new System.Drawing.Size(45, 22);
+            this.toggleButton1.SoildStyle = true;
+            this.toggleButton1.TabIndex = 0;
+            this.toggleButton1.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.searchBox1);
             this.Controls.Add(this.toggleButton2);
             this.Controls.Add(this.toggleButton1);
             this.Name = "Form1";
@@ -81,6 +93,7 @@
 
         private CustomControlLibrary.Controls.ToggleButton toggleButton1;
         private CustomControlLibrary.Controls.ToggleButton toggleButton2;
+        private CustomControlLibrary.Controls.SearchBox searchBox1;
     }
 }
 

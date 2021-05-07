@@ -6,6 +6,12 @@
 
 ![Toggle](Images/toggle.png)
 
+>2. Auto
+
+![Auto](Images/auto.png)
+
 ### Reference
 
 [ToggleButton](https://rjcodeadvance.com/toggle-button-custom-controls-winform-c/)
+
+[Auto](https://insurang.tistory.com/364)

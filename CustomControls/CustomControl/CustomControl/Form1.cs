@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,7 +15,15 @@ namespace CustomControl
     {
         public Form1()
         {
-            InitializeComponent();    
+            InitializeComponent();
+            InitializeControl();
+        }
+
+        private void InitializeControl()
+        {
+            searchBox1.DisplayLimitCount = 10;            
+
+            searchBox1.Data = File.ReadAllLines(@"Sample/Sample.txt").ToList();
         }
     }
 }
