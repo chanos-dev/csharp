@@ -17,3 +17,5 @@
 >0x07 Bridge Pattern
 
 >0x08 Observer Pattern
+
+>0x09 Chain of responsibility
