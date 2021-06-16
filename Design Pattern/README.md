@@ -18,4 +18,6 @@
 
 >0x08 Observer Pattern
 
->0x09 Chain of responsibility
+>0x09 Chain of responsibility Pattern
+
+>0x10 Facade Pattern
