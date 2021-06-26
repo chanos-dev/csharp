@@ -12,7 +12,7 @@ namespace StrategyPattern
         {
             List<Refrigerator> refrigerators = new List<Refrigerator>();
             refrigerators.Add(new GeneralRefrigerator(new ActionGeneral(), "일반냉장고"));
-            refrigerators.Add(new GeneralRefrigerator(new ActionKimchi(), "김치냉장고"));
+            refrigerators.Add(new KimchiRefrigerator(new ActionKimchi(), "김치냉장고"));
 
             foreach(Refrigerator refrigerator in refrigerators)
             {
@@ -31,7 +31,7 @@ namespace StrategyPattern
     {
         public override void Run(string name)
         {
-            Console.WriteLine($"Run {name}~!");
+            Console.WriteLine($"Run Kimchi {name}~!");
             Console.WriteLine("I Love it~!");
         }
     }
@@ -40,7 +40,7 @@ namespace StrategyPattern
     {
         public override void Run(string name)
         {
-            Console.WriteLine($"Run {name}~!");
+            Console.WriteLine($"Run General {name}~!");
         }
     }
 
