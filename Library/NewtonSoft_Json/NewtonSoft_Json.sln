@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1209
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewtonSoft_Json", "NewtonSoft_Json\NewtonSoft_Json.csproj", "{91DD2F80-D8DE-4734-A113-00B0FD73063C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{91DD2F80-D8DE-4734-A113-00B0FD73063C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91DD2F80-D8DE-4734-A113-00B0FD73063C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91DD2F80-D8DE-4734-A113-00B0FD73063C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91DD2F80-D8DE-4734-A113-00B0FD73063C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {926E952C-54F7-46BE-B850-30E0F0AD9B37}
+	EndGlobalSection
+EndGlobal
