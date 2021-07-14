@@ -29,24 +29,35 @@ namespace EPPlus
             using (var excel = CreateDefaultExcel(@"C:\test.xlsx"))
             using (var sheet = excel.Workbook.Worksheets[EXCEL_SHEET])
             {
+                int row = 2;
 
-                sheet.Cells["A2"].Value = "Hello!! Hello!! Hello!! Hello!!";
+                int width = -1;
 
-                using (var image = Image.FromFile(@"C:\test.jpg"))
+                foreach (var e in Enumerable.Range(1, 10))
                 {
-                    var excelImage = sheet.Drawings.AddPicture("test", image);
-                    excelImage.SetSize(200, 200);
-                    excelImage.SetPosition(1, 0, 1, 0);
+                    
+                    sheet.Cells[$"A{row}"].Value = $"타입{e}";
+                    sheet.Cells[$"B{row}"].Value = $"시간{e}";
+                    sheet.Cells[$"C{row}"].Value = $"내용{e}";
+
+                    using (var image = Image.FromFile(@"C:\test.jpg"))
+                    {
+                        var excelImage = sheet.Drawings.AddPicture($"{e}test", image);
+                        excelImage.SetSize(100 * e, 100 * e);
+                        excelImage.SetPosition(row - 1, 0, 3, 0);
+
+                        if (width <= 100 * e)
+                            width = 100 * e;
+                    }
+
+                    sheet.Row(row).Height = 100 * e * DEFAULT_HEIGHT;
+
+                    row++;
                 }
 
-                sheet.Row(2).Height = 200 * DEFAULT_HEIGHT;
-
                 SetExcelStyle(sheet);
-
-                sheet.Column(2).Width = 200 / DEFAULT_WIDTH; 
-
+                sheet.Column(4).Width = width / DEFAULT_WIDTH; 
                 excel.Save();
-
             }
 
             Console.WriteLine("Created Excel!");
@@ -62,6 +73,7 @@ namespace EPPlus
             var sheet = excel.Workbook.Worksheets.Add(EXCEL_SHEET);
 
             sheet.Cells[DEFAULT_CELL].LoadFromText(string.Join(",", EXCEL_COLUMN));
+            sheet.Cells[sheet.Dimension.Address].Style.Fill.SetBackground(Color.LightGreen, ExcelFillStyle.Solid);
 
             // default save
             excel.Save();
