@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1209
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VisitorPattern", "VisitorPattern\VisitorPattern.csproj", "{BAAB76F3-1A53-4515-ADEE-275C3A5DC251}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BAAB76F3-1A53-4515-ADEE-275C3A5DC251}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BAAB76F3-1A53-4515-ADEE-275C3A5DC251}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BAAB76F3-1A53-4515-ADEE-275C3A5DC251}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BAAB76F3-1A53-4515-ADEE-275C3A5DC251}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A10B993A-06ED-4294-B371-C4F50CB49E08}
+	EndGlobalSection
+EndGlobal
