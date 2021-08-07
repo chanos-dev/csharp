@@ -36,13 +36,17 @@ namespace ZXing.net
 
                     var reader = new BarcodeReader()
                     { 
+                        AutoRotate = true,
+                        TryInverted = true,
                         Options =
                         {
+                            ReturnCodabarStartEnd = true,
+                            PureBarcode = false,
                             PossibleFormats = new List<BarcodeFormat> { BarcodeFormat.All_1D, BarcodeFormat.QR_CODE },
                             TryHarder = true, 
                         }
                     };
-                    
+
                     // barcode result.
                     var results = reader.DecodeMultiple((Bitmap)pictureBox1.Image);
                     
