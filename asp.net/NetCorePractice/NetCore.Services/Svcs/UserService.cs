@@ -16,17 +16,17 @@ namespace NetCore.Services.Svcs
             {
                 new User()
                 {
-                    UserID = "test",
+                    UserId = "test",
                     UserName = "테스터",
                     UserEmail = "test@gmail.com",
-                    UserPW = "test",
+                    UserPw = "test",
                 }
             };
         }
 
         private bool CheckUserInfo(string userId, string userPw)
         {
-            return GetUserInfos().Any(user => user.UserID == userId && user.UserPW == userPw);
+            return GetUserInfos().Any(user => user.UserId == userId && user.UserPw == userPw);
         }
 
         public bool MatchUserInfo(LoginInfo loginInfo)

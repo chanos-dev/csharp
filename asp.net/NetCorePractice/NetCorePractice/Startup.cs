@@ -1,9 +1,11 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using NetCore.Services.Data;
 using NetCore.Services.Interfaces;
 using NetCore.Services.Svcs;
 using System;
@@ -26,6 +28,13 @@ namespace NetCorePractice
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddScoped<IUser, UserService>();
+
+            services.AddDbContext<CodeFirstDbContext>(options =>
+            {
+                options.UseMySQL(connectionString: Configuration.GetConnectionString(name: "DefaultConnection"),
+                                MySQLOptionsAction: mig => mig.MigrationsAssembly(assemblyName: "NetCore.Migrations"));
+
+            });
 
             services.AddControllersWithViews();
             //services.AddMvc();
