@@ -13,22 +13,33 @@ namespace NetCore.Services.Data
 
         }
 
-        public DbSet<User> Users { get; set; }
+        public DbSet<User> User { get; set; }
+        public DbSet<UserRole> UserRole { get; set; }
+        public DbSet<UserRolesByUser> UserRolesByUser { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            base.OnModelCreating(modelBuilder);
+            base.OnModelCreating(modelBuilder); 
 
-            modelBuilder.Entity<User>().ToTable(name: "User");
-
-            modelBuilder.Entity<UserRolesByUser>().HasKey(c => new { c.UserId, c.RoleId });
+            modelBuilder.Entity<UserRolesByUser>().HasKey(c => new { c.UserId, c.RoleId });            
 
             modelBuilder.Entity<User>(e =>
             {
                 e.Property(c => c.IsMembershipWithdrawn).HasDefaultValue(value: false);
+                e.Property(c => c.JoinedUTCDate).ValueGeneratedOnAdd();
             });
 
-            modelBuilder.Entity<User>().HasIndex(c => new { c.UserEmail });
+            modelBuilder.Entity<UserRole>(e =>
+            {
+                e.Property(c => c.ModifiedUtcDate).ValueGeneratedOnAdd();
+            });
+
+            modelBuilder.Entity<UserRolesByUser>(e =>
+            {
+                e.Property(c => c.OwnedUtcDate).ValueGeneratedOnAdd();
+            });
+
+            modelBuilder.Entity<User>().HasIndex(c => new { c.UserEmail }).IsUnique(true);
         }
     }
 }

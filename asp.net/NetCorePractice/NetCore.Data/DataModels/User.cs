@@ -6,6 +6,7 @@ using System.Text;
 
 namespace NetCore.Data.DataModels
 {
+    [Table("user")]
     public class User
     {
         [Key, StringLength(12), Column(TypeName ="varchar(12)")]

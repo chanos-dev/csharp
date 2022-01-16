@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
+using MySql.EntityFrameworkCore.Metadata;
 
 namespace NetCore.Migrations.Migrations
 {
@@ -17,6 +18,7 @@ namespace NetCore.Migrations.Migrations
                     UserPw = table.Column<string>(type: "varchar(12)", maxLength: 12, nullable: false),
                     IsMembershipWithdrawn = table.Column<bool>(type: "tinyint(1)", nullable: false, defaultValue: false),
                     JoinedUTCDate = table.Column<DateTime>(type: "datetime", nullable: false)
+                        .Annotation("MySQL:ValueGenerationStrategy", MySQLValueGenerationStrategy.IdentityColumn)
                 },
                 constraints: table =>
                 {

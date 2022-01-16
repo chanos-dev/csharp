@@ -9,7 +9,7 @@ using NetCore.Services.Data;
 namespace NetCore.Migrations.Migrations
 {
     [DbContext(typeof(CodeFirstDbContext))]
-    [Migration("20220109091231_codefirst")]
+    [Migration("20220109095142_codefirst")]
     partial class codefirst
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -30,6 +30,7 @@ namespace NetCore.Migrations.Migrations
                         .HasDefaultValue(false);
 
                     b.Property<DateTime>("JoinedUTCDate")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("datetime");
 
                     b.Property<string>("UserEmail")

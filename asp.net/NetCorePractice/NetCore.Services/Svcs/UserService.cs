@@ -1,5 +1,6 @@
 ﻿using NetCore.Data.DataModels;
 using NetCore.Data.ViewModels;
+using NetCore.Services.Data;
 using NetCore.Services.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -9,20 +10,15 @@ using System.Text;
 namespace NetCore.Services.Svcs
 {
     public class UserService : IUser
-    { 
-        private IEnumerable<User> GetUserInfos()
+    {
+        private CodeFirstDbContext DbContext { get; set; }
+
+        public UserService(CodeFirstDbContext context)
         {
-            return new List<User>()
-            {
-                new User()
-                {
-                    UserId = "test",
-                    UserName = "테스터",
-                    UserEmail = "test@gmail.com",
-                    UserPw = "test",
-                }
-            };
+            this.DbContext = context;
         }
+
+        private IEnumerable<User> GetUserInfos() => DbContext.User.ToArray();
 
         private bool CheckUserInfo(string userId, string userPw)
         {

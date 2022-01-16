@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetCore.Services", "NetCore
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetCore.Data", "NetCore.Data\NetCore.Data.csproj", "{BF4BC8C5-13FE-4C98-AAC8-720F9F884D61}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetCore.Migrations", "NetCore.Migrations\NetCore.Migrations.csproj", "{5CBF45AC-7BAA-46BF-BC68-01D048436024}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetCore.Migrations", "NetCore.Migrations\NetCore.Migrations.csproj", "{5CBF45AC-7BAA-46BF-BC68-01D048436024}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
