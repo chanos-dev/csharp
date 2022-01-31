@@ -7,7 +7,13 @@ using System.Threading.Tasks;
 
 namespace NewtonSoft_Json.Model
 {
-    internal class Person
+    internal class BaseJson
+    {
+        [JsonExtensionData]
+        public Dictionary<string, object> UnknownProperties { get; set; }
+    }
+
+    internal class Person : BaseJson
     {
         public string Name { get; set; }
 
@@ -29,5 +35,16 @@ namespace NewtonSoft_Json.Model
         {
             return $"Name : {Name}\nAge : {Age}\nJob : {Job}";
         }
+    }
+
+    internal class UnknownPerson : Person
+    {
+        public Home Home { get; set; }
+    }
+
+    internal class Home : BaseJson
+    { 
+        public int ZipCode { get; set; }
+        public string Address { get; set; } 
     }
 }
