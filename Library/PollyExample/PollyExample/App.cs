@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Hosting;
+using Polly.Timeout;
 
 namespace PollyExample
 { 
@@ -22,6 +23,19 @@ namespace PollyExample
             HttpResponseMessage successResponse = await client.GetAsync("WeatherForecast");
 
             Console.WriteLine(await successResponse.Content.ReadAsStringAsync());
+
+            try
+            {
+                HttpResponseMessage timeoutResponse = await client.GetAsync("WeatherForecast/timeout");
+
+                Console.WriteLine(await timeoutResponse.Content.ReadAsStringAsync());
+            }
+            catch(TimeoutRejectedException tex)
+            {
+                Console.WriteLine(tex.Message);
+            }
+
+            Console.WriteLine("Done!!");
         }
     }
 }

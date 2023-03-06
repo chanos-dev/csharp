@@ -2,6 +2,7 @@
 using Microsoft.Extensions.Hosting;
 using Polly;
 using Polly.Extensions.Http;
+using Polly.Timeout;
 using PollyExample;
 
 await Host.CreateDefaultBuilder()          
@@ -13,7 +14,9 @@ await Host.CreateDefaultBuilder()
                       })
                       .AddPolicyHandler(HttpPolicyExtensions.HandleTransientHttpError()
                                         .OrResult(msg => !msg.IsSuccessStatusCode)
-                                        .WaitAndRetryAsync(3, retryAttempt => TimeSpan.FromSeconds(Math.Pow(2, retryAttempt))));
+                                        .Or<TimeoutRejectedException>()
+                                        .WaitAndRetryAsync(3, retryAttempt => TimeSpan.FromSeconds(Math.Pow(2, retryAttempt))))
+                      .AddPolicyHandler(Policy.TimeoutAsync<HttpResponseMessage>(3)); 
 
               services.AddHostedService<App>();
           })  

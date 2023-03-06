@@ -43,5 +43,13 @@ namespace PollyWebService.Controllers
         {
             return BadRequest();
         }
+
+        [HttpGet]
+        [Route("timeout")]
+        public IActionResult GetTimeout()
+        {
+            Thread.Sleep(15000);
+            return Ok();
+        }
     }
 }
